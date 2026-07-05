@@ -1,0 +1,29 @@
+{
+  "reporting_entity_name": "UnitedHealthcare",
+  "reporting_entity_type": "health insurance issuer",
+  "version": "2.0.0",
+  "last_updated_on": "2026-07-04",
+  "reporting_structure": [
+    {
+      "reporting_plans": [
+        {
+          "issuer_name": "UnitedHealthcare",
+          "plan_id_type": "ein",
+          "plan_id": "12-3456789",
+          "plan_market_type": "group",
+          "plan_sponsor_name": "Contoso Employer Group"
+        }
+      ],
+      "in_network_files": [
+        {
+          "description": "UnitedHealthcare Choice Plus in-network-rates",
+          "location": "https://example.com/uhc/mrf/2026-07-04_UHC_valid_in-network-rates.json"
+        }
+      ],
+      "allowed_amount_file": {
+        "description": "UnitedHealthcare Choice Plus allowed-amounts",
+        "location": "https://example.com/uhc/mrf/2026-07-04_UHC_valid_allowed-amounts.json"
+      }
+    }
+  ]
+}

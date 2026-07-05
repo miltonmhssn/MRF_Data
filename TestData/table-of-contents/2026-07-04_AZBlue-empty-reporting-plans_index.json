@@ -1,0 +1,21 @@
+{
+  "reporting_entity_name": "Blue Cross Blue Shield of Arizona",
+  "reporting_entity_type": "health insurance issuer",
+  "version": "2.0.0",
+  "last_updated_on": "2026-07-04",
+  "reporting_structure": [
+    {
+      "reporting_plans": [],
+      "in_network_files": [
+        {
+          "description": "Blue Cross Blue Shield of Arizona PPO in-network-rates",
+          "location": "https://example.com/azblue/mrf/2026-07-04_AZBlue_valid_in-network-rates.json"
+        }
+      ],
+      "allowed_amount_file": {
+        "description": "Blue Cross Blue Shield of Arizona PPO allowed-amounts",
+        "location": "https://example.com/azblue/mrf/2026-07-04_AZBlue_valid_allowed-amounts.json"
+      }
+    }
+  ]
+}

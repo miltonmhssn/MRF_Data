@@ -1,0 +1,30 @@
+{
+  "reporting_entity_name": "Aetna",
+  "reporting_entity_type": "health insurance issuer",
+  "version": "",
+  "last_updated_on": "2026-07-04",
+  "reporting_structure": [
+    {
+      "reporting_plans": [
+        {
+          "plan_name": "Choice POS II",
+          "issuer_name": "Aetna",
+          "plan_id_type": "ein",
+          "plan_id": "12-3456789",
+          "plan_market_type": "group",
+          "plan_sponsor_name": "Contoso Employer Group"
+        }
+      ],
+      "in_network_files": [
+        {
+          "description": "Aetna Choice POS II in-network-rates",
+          "location": "https://example.com/aetna/mrf/2026-07-04_Aetna_valid_in-network-rates.json"
+        }
+      ],
+      "allowed_amount_file": {
+        "description": "Aetna Choice POS II allowed-amounts",
+        "location": "https://example.com/aetna/mrf/2026-07-04_Aetna_valid_allowed-amounts.json"
+      }
+    }
+  ]
+}
