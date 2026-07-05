@@ -1,0 +1,57 @@
+{
+  "reporting_entity_name": "Aetna",
+  "reporting_entity_type": "health insurance issuer",
+  "plan_name": "Choice POS II",
+  "issuer_name": "Aetna",
+  "last_updated_on": "2026-07-04",
+  "version": "2.0.0",
+  "provider_references": [
+    {
+      "provider_group_id": 1,
+      "provider_groups": [
+        {
+          "npi": [
+            1234567890,
+            1987654321
+          ]
+        }
+      ],
+      "network_name": [
+        "Choice Plus Network"
+      ]
+    }
+  ],
+  "in_network": [
+    {
+      "negotiation_arrangement": "ffs",
+      "name": "Office Visit",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2026",
+      "billing_code": "99213",
+      "description": "MRF QA service",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            1
+          ],
+          "negotiated_prices": [
+            {
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "negotiated_type": "negotiated",
+              "negotiated_rate": 125.5,
+              "expiration_date": "2026-12-31",
+              "service_code": [
+                "11"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "plan_sponsor_name": "Contoso Employer Group",
+  "plan_id_type": "ein",
+  "plan_id": "12-3456789",
+  "plan_market_type": "group"
+}
