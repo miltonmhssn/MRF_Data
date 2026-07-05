@@ -1,0 +1,46 @@
+{
+  "reporting_entity_name": "Aetna",
+  "reporting_entity_type": "health insurance issuer",
+  "plan_name": "Choice POS II",
+  "issuer_name": "Aetna",
+  "last_updated_on": "2026-07-04",
+  "version": "2.0.0",
+  "out_of_network": [
+    {
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2026",
+      "billing_code": "99213",
+      "description": "MRF QA service",
+      "allowed_amounts": [
+        {
+          "tin": {
+            "type": "ein",
+            "value": "12-3456789"
+          },
+          "billing_class": "professional",
+          "setting": "outpatient",
+          "payments": [
+            {
+              "allowed_amount": 125.5,
+              "providers": [
+                {
+                  "billed_charge": 250.0,
+                  "npi": [
+                    1234567890
+                  ]
+                }
+              ]
+            }
+          ],
+          "service_code": [
+            "11"
+          ]
+        }
+      ]
+    }
+  ],
+  "plan_sponsor_name": "Contoso Employer Group",
+  "plan_id_type": "ein",
+  "plan_id": "12-3456789",
+  "plan_market_type": "group"
+}
