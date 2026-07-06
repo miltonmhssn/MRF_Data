@@ -18,12 +18,12 @@
       "in_network_files": [
         {
           "description": "Aetna Choice POS II in-network-rates",
-          "location": "https://example.com/aetna/mrf/2026-07-04_Aetna_valid_in-network-rates.json"
+          "location": "https://raw.githubusercontent.com/miltonmhssn/MRF_Data/refs/heads/main/TestData/in-network-rates/2026-07-04_Aetna-valid-negotiation-arrangement-bundle_in-network-rates.json"
         }
       ],
       "allowed_amount_file": {
         "description": "Aetna Choice POS II allowed-amounts",
-        "location": "https://example.com/aetna/mrf/2026-07-04_Aetna_valid_allowed-amounts.json"
+        "location": "https://raw.githubusercontent.com/miltonmhssn/MRF_Data/refs/heads/main/TestData/allowed-amounts/2026-07-04_UHC-valid-billing-code-type-ms-drg_allowed-amounts.json"
       }
     },
     {
@@ -40,12 +40,13 @@
       "in_network_files": [
         {
           "description": "Blue Cross Blue Shield of Arizona PPO in-network-rates",
-          "location": "https://example.com/azblue/mrf/2026-07-04_AZBlue_valid_in-network-rates.json"
+          "location": "https://raw.githubusercontent.com/karthic117/MRF_testdata/refs/heads/main/2026-07-06_130917_v2_loadtest-5_in-network-rates.json
+"
         }
       ],
       "allowed_amount_file": {
         "description": "Blue Cross Blue Shield of Arizona PPO allowed-amounts",
-        "location": "https://example.com/azblue/mrf/2026-07-04_AZBlue_valid_allowed-amounts.json"
+        "location": "https://raw.githubusercontent.com/miltonmhssn/MRF_Data/refs/heads/main/TestData/allowed-amounts/2026-07-04_UHC-valid-service-code-99_allowed-amounts.json"
       }
     }
   ]
