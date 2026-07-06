@@ -17,12 +17,12 @@
       "in_network_files": [
         {
           "description": "Aetna Choice POS II in-network-rates",
-          "location": "https://example.com/aetna/mrf/2026-07-04_Aetna_valid_in-network-rates.json"
+          "location": "https://raw.githubusercontent.com/miltonmhssn/MRF_Data/refs/heads/main/TestData/in-network-rates/2026-07-04_AZBlue-empty-billing-code-modifier_in-network-rates.json"
         }
       ],
       "allowed_amount_file": {
         "description": "Aetna Choice POS II allowed-amounts",
-        "location": "https://example.com/aetna/mrf/2026-07-04_Aetna_valid_allowed-amounts.json"
+        "location": "https://raw.githubusercontent.com/miltonmhssn/MRF_Data/refs/heads/main/TestData/allowed-amounts/2026-07-04_AZBlue-valid-billing-code-type-cdt_allowed-amounts.json"
       }
     }
   ]
