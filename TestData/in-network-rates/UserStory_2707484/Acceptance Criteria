@@ -1,0 +1,66 @@
+1 — Validation returns correct rule classification for a mixed template
+Given the operator uploads a v2.0 template with the following 6 rows for vendor "Montefiore", pricing month June 2024, file type "In-Network Negotiated Rates":
+
+Row 1: Geographic Category = State(s), State(s) = Wisconsin — clean, no existing record
+Row 2: Geographic Category = State(s), State(s) = Nevada, Arizona — clean
+Row 3: Geographic Category = National — clean
+Row 4: Geographic Category = State(s), State(s) = Wisconsin — exact duplicate of Row 1 (same URL) — triggers Rule A intra-template
+Row 5: Geographic Category = State(s), State(s) = Wisconsin — same geography as Row 1, different URL — triggers Rule C intra-template
+Row 6: Geographic Category = State(s), State(s) = Nevada — overlaps with Row 2 (Nevada, Arizona) — triggers Rule B intra-template And no existing DB records for Montefiore, June 2024, In-Network Negotiated Rates exist When the template is uploaded to POST /jobs/bulk/validate Then:
+A single consolidated modal opens titled "Issues found in the uploaded template" with the following sections:
+Blocked entries (Rule A): "Some rows in this template refer to the same file setup…" — table lists Row 1 and Row 4; columns: File URL/Name | File Category | Geography | Vendor
+Entries to review (Rule C): "Some files match existing files for the same vendor…" — table lists Row 5
+Entries with overlap (Rule B): "Some files overlap with existing geographic coverage…" — table lists Row 6; Geography column shows "Nevada (Overlaps with NV, AZ)"
+The footer summary reads: "1 entry blocked and removed. 2 entries have warnings but will remain available for upload."
+A single Close button dismisses the entire modal
+After closing: Row 4 is in the Error tab; Rows 1, 2, 3, 5, 6 remain in the main upload table (Rows 5 and 6 with warning indicators)
+Negative scenario:Given the operator uploads the same template a second time after fixing Row 4 (removing the duplicate) When validation runs Then the Rule A modal does not appear; only Rule B and Rule C warnings surface for Rows 5 and 6
+
+2 — Operator reviews warnings and proceeds to Upload MRF
+
+Given validation results are as described in AC7.1 (Row 4 in Error tab; Rows 1, 2, 3, 5, 6 in main table) And the operator has reviewed and closed the Rule B and Rule C warning modals When the operator clicks Upload MRF Then:
+
+Ingestion begins immediately for Rows 1, 2, 3, 5, and 6 — no further prompts
+No confirmation dialogs or decision gates appear
+5 independent jobs are created and transition IN_PROGRESS → COMPLETED
+Row 1 (Wisconsin) → SINGLE-STATE, priority_level = 1
+Row 2 (Nevada, Arizona) → MULTI-STATE, priority_level = 2
+Row 3 (National) → NATIONAL, priority_level = 3
+Row 5 (Wisconsin, different URL) → SINGLE-STATE, priority_level = 1
+Row 6 (Nevada) → SINGLE-STATE, priority_level = 1
+All 5 files appear on the dashboard with status COMPLETED
+Overall result: SUCCEEDED, submitted = 5, succeeded = 5, failed = 0
+Negative scenario:Given the operator clicks Upload MRF without closing the warning modal (modal still open) When the click is attempted Then Upload MRF is not accessible until the modal is dismissed — the operator must acknowledge the warning before proceeding
+
+3 — Pricing API returns correct priority order after ingestion
+
+Given all 5 rows from AC7.2 are COMPLETED in the DB for Montefiore, June 2024, In-Network Negotiated Rates And records exist for: Wisconsin SINGLE-STATE (two files — Row 1 and Row 5), Nevada+Arizona MULTI-STATE, National, Nevada SINGLE-STATE When the Pricing API is queried for state = Wisconsin, vendor = Montefiore, month = June 2024, type = In-Network Negotiated Rates Then:
+
+The SINGLE-STATE record is returned (priority 1 — most specific)
+Response metadata indicates geographicCategory = SINGLE-STATE
+MULTI-STATE and NATIONAL records are not returned for this Wisconsin query
+Negative scenario 1:Given the Pricing API is queried for state = Oregon — no single-state or regional file exists for Oregon When the API evaluates priority order Then the NATIONAL record is returned (priority 3 fallback); response metadata indicates geographicCategory = NATIONAL
+
+Negative scenario 2:Given the Pricing API is queried for state = Arizona When the API evaluates priority order Then the MULTI-STATE record (Nevada, Arizona — priority 2) is returned; the NATIONAL fallback is not used while a more specific record exists
+
+4 — Non-regression: Promote Vendor and Reconciliation jobs run unchanged
+
+Given all 5 files from AC7.2 are COMPLETED in the DB When the Promote Vendor Job and Reconciliation Job both execute Then:
+
+Both jobs complete without errors
+Reconciliation correctly populates post-processing fields, counts, and status outcomes for all 5 files
+No regression is introduced by the new Geographic Category or State(s) fields
+Negative scenario:Given a file ingested via bulk upload has geographic category NATIONAL When reconciliation runs Then the national file is treated identically to a nationally-ingested single-file upload — no special handling or skipping occurs
+
+5 — Performance: validation completes within SLA; Pricing API responds within SLA
+
+Given a template with up to the agreed maximum row count is uploaded And the DB contains existing IN_PROGRESS and COMPLETED records for conflict lookup When POST /jobs/bulk/validate is called And the Pricing API is queried after ingestion Then:
+
+Template validation completes within 3 seconds end-to-end; the UI remains responsive
+Pricing API returns a response within 3 seconds for any state/vendor/month/type combination
+Ingestion itself is asynchronous and does not impact the validation response time
+Negative scenario:Given a template contains rows with malformed geographic category values and excessively long state lists When validation runs Then validation still completes within the 3-second SLA; malformed rows return field-level errors immediately without triggering long-running DB queries
+
+Consistency note: We should strive for consistency across all touchpoints. The E2E scenario uses "Montefiore" and "Wisconsin / Nevada / Arizona" to stay consistent with the data shown in the wireframes — teams should use these same values in demos, test data setup, and QA scripts wherever possible. The "Geography" column rendered in wireframe modals must always reflect the resolved combination of "Geographic Category" and "State(s)" as submitted in the template. The order of attributes in the wireframe may not match the template column order, but both must remain aligned and stitched.
+
+
