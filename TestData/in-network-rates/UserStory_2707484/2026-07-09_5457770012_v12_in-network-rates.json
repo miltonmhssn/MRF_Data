@@ -1,0 +1,1524 @@
+{
+  "reporting_entity_name": "AMPS",
+  "reporting_entity_type": "health insurance issuer",
+  "plan_name": "AMPSNEXT",
+  "plan_id_type": "ein",
+  "plan_id": "5644057244",
+  "plan_market_type": "individual",
+  "plan_sponsor_name": "MRF",
+  "issuer_name": "Mohammad",
+  "last_updated_on": "2024-10-30",
+  "version": "2.0.0",
+  "provider_references": [
+    {
+      "provider_group_id": 1,
+      "network_name": [
+        "Network C"
+      ],
+      "provider_groups": [
+        {
+          "npi": [
+            1421772878
+          ],
+          "tin": {
+            "type": "ein",
+            "value": "40-1080727",
+            "business_name": "Advanced Medical Group"
+          }
+        }
+      ]
+    },
+    {
+      "provider_group_id": 2,
+      "network_name": [
+        "Network Beta"
+      ],
+      "provider_groups": [
+        {
+          "npi": [
+            1166089453
+          ],
+          "tin": {
+            "type": "ein",
+            "value": "43-5162431",
+            "business_name": "Regional Medical Associates"
+          }
+        }
+      ]
+    },
+    {
+      "provider_group_id": 3,
+      "network_name": [
+        "Network Plus"
+      ],
+      "provider_groups": [
+        {
+          "npi": [
+            1096195624
+          ],
+          "tin": {
+            "type": "ein",
+            "value": "40-8664050",
+            "business_name": "Specialty Health Group"
+          }
+        }
+      ]
+    },
+    {
+      "provider_group_id": 4,
+      "network_name": [
+        "Network Select"
+      ],
+      "provider_groups": [
+        {
+          "npi": [
+            1863693818
+          ],
+          "tin": {
+            "type": "ein",
+            "value": "14-3915875",
+            "business_name": "Regional Medical Associates"
+          }
+        }
+      ]
+    },
+    {
+      "provider_group_id": 5,
+      "network_name": [
+        "Network Alpha"
+      ],
+      "provider_groups": [
+        {
+          "npi": [
+            1390639703
+          ],
+          "tin": {
+            "type": "ein",
+            "value": "94-7534824",
+            "business_name": "Specialty Health Group"
+          }
+        }
+      ]
+    }
+  ]
+  ,"in_network":[
+    {
+      "negotiation_arrangement": "ffs",
+      "name": "X-ray chest 2 views 1",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2023",
+      "billing_code": "71046",
+      "description": "Radiologic examination chest 2 views",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            4
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "percentage",
+              "negotiated_rate": 23672.02,
+              "expiration_date": "2026-12-09",
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "service_code": [
+                "CSTM-00"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "negotiation_arrangement": "bundle",
+      "name": "Colonoscopy diagnostic 2",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2023",
+      "billing_code": "45378",
+      "description": "Colonoscopy flexible proximal to splenic flexure diagnostic",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            3
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "derived",
+              "negotiated_rate": 17347.09,
+              "expiration_date": "2025-07-12",
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "service_code": [
+                "13"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "negotiation_arrangement": "capitation",
+      "name": "Ultrasound abdomen 3",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2023",
+      "billing_code": "76700",
+      "description": "Ultrasonography abdomen complete real time",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            3
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "negotiated",
+              "negotiated_rate": 7879.22,
+              "expiration_date": "2026-07-17",
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "service_code": [
+                "13"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "negotiation_arrangement": "capitation",
+      "name": "Total knee arthroplasty 4",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2023",
+      "billing_code": "27447",
+      "description": "Arthroplasty knee condyle and plateau medial and lateral compartments",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            5
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "per diem",
+              "negotiated_rate": 13988.15,
+              "expiration_date": "2027-08-25",
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "service_code": [
+                "81"
+              ],
+              "billing_code_modifier": [
+                "TC",
+                "26"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "negotiation_arrangement": "bundle",
+      "name": "Vaccine admin IM 5",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2023",
+      "billing_code": "90471",
+      "description": "Immunization administration intramuscular",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            4
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "per diem",
+              "negotiated_rate": 2860.37,
+              "expiration_date": "2027-05-06",
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "service_code": [
+                "11",
+                "21",
+                "22"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "negotiation_arrangement": "capitation",
+      "name": "Office visit new patient 6",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2023",
+      "billing_code": "99203",
+      "description": "Office or outpatient visit new patient, moderate complexity",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            4
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "per diem",
+              "negotiated_rate": 10684.98,
+              "expiration_date": "2027-03-19",
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "service_code": [
+                "11",
+                "21"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "negotiation_arrangement": "bundle",
+      "name": "Ultrasound abdomen 7",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2023",
+      "billing_code": "76700",
+      "description": "Ultrasonography abdomen complete real time",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            2
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "fee schedule",
+              "negotiated_rate": 10859.33,
+              "expiration_date": "2025-07-09",
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "service_code": [
+                "61"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "negotiation_arrangement": "capitation",
+      "name": "CT head without contrast 8",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2023",
+      "billing_code": "70450",
+      "description": "Computed tomography head or brain without contrast material",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            5
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "per diem",
+              "negotiated_rate": 10161.91,
+              "expiration_date": "2026-01-02",
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "service_code": [
+                "12"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "negotiation_arrangement": "bundle",
+      "name": "Critical care first hour 9",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2023",
+      "billing_code": "99291",
+      "description": "Critical care evaluation and management first 30-74 minutes",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            2
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "negotiated",
+              "negotiated_rate": 20413.13,
+              "expiration_date": "2026-04-08",
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "service_code": [
+                "21",
+                "22"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "negotiation_arrangement": "capitation",
+      "name": "Inj perflutren lip micros 10",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2023",
+      "billing_code": "Q9957",
+      "description": "Injection perflutren lipid microspheres per ml",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            2
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "fee schedule",
+              "negotiated_rate": 5780.94,
+              "expiration_date": "2025-07-27",
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "service_code": [
+                "13"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "negotiation_arrangement": "bundle",
+      "name": "Subsequent hospital care 11",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2023",
+      "billing_code": "99232",
+      "description": "Subsequent hospital care moderate complexity per day",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            3
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "percentage",
+              "negotiated_rate": 22395.99,
+              "expiration_date": "2025-01-20",
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "service_code": [
+                "21"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "negotiation_arrangement": "ffs",
+      "name": "CT head without contrast 12",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2023",
+      "billing_code": "70450",
+      "description": "Computed tomography head or brain without contrast material",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            3
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "fee schedule",
+              "negotiated_rate": 3419.44,
+              "expiration_date": "2026-08-08",
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "service_code": [
+                "71"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "negotiation_arrangement": "bundle",
+      "name": "CT head without contrast 13",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2023",
+      "billing_code": "70450",
+      "description": "Computed tomography head or brain without contrast material",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            2
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "fee schedule",
+              "negotiated_rate": 17028.13,
+              "expiration_date": "2026-10-03",
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "service_code": [
+                "CSTM-00"
+              ],
+              "billing_code_modifier": [
+                "GZ"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "negotiation_arrangement": "ffs",
+      "name": "MRI brain without contrast 14",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2023",
+      "billing_code": "70551",
+      "description": "Magnetic resonance imaging brain without contrast material",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            1
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "fee schedule",
+              "negotiated_rate": 15181.02,
+              "expiration_date": "2025-03-26",
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "service_code": [
+                "31"
+              ],
+              "billing_code_modifier": [
+                "26",
+                "GX"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "negotiation_arrangement": "ffs",
+      "name": "ECG with interpretation 15",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2023",
+      "billing_code": "93000",
+      "description": "Routine electrocardiogram with at least 12 leads with interpretation and report",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            1
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "per diem",
+              "negotiated_rate": 1937.73,
+              "expiration_date": "2026-03-16",
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "service_code": [
+                "11"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "negotiation_arrangement": "bundle",
+      "name": "Office visit est patient 16",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2023",
+      "billing_code": "99213",
+      "description": "Office or outpatient visit established patient, moderate complexity",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            2
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "derived",
+              "negotiated_rate": 23288.59,
+              "expiration_date": "2027-03-21",
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "service_code": [
+                "11",
+                "22"
+              ],
+              "billing_code_modifier": [
+                "GY"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "negotiation_arrangement": "ffs",
+      "name": "Total knee arthroplasty 17",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2023",
+      "billing_code": "27447",
+      "description": "Arthroplasty knee condyle and plateau medial and lateral compartments",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            2
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "percentage",
+              "negotiated_rate": 4675.97,
+              "expiration_date": "2025-10-11",
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "service_code": [
+                "51"
+              ],
+              "billing_code_modifier": [
+                "KX"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "negotiation_arrangement": "capitation",
+      "name": "Office visit est patient 18",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2023",
+      "billing_code": "99213",
+      "description": "Office or outpatient visit established patient, moderate complexity",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            2
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "per diem",
+              "negotiated_rate": 12640.09,
+              "expiration_date": "2027-10-20",
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "service_code": [
+                "11",
+                "22"
+              ],
+              "billing_code_modifier": [
+                "GT",
+                "AT"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "negotiation_arrangement": "bundle",
+      "name": "Vaccine admin IM 19",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2023",
+      "billing_code": "90471",
+      "description": "Immunization administration intramuscular",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            1
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "percentage",
+              "negotiated_rate": 12392.9,
+              "expiration_date": "2027-03-11",
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "service_code": [
+                "11",
+                "21",
+                "22"
+              ],
+              "billing_code_modifier": [
+                "AT",
+                "GT"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "negotiation_arrangement": "ffs",
+      "name": "Preventive medicine new 20",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2023",
+      "billing_code": "99385",
+      "description": "Initial comprehensive preventive medicine evaluation new patient 18-39 years",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            2
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "percentage",
+              "negotiated_rate": 9877.02,
+              "expiration_date": "2025-05-01",
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "service_code": [
+                "CSTM-00"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "negotiation_arrangement": "capitation",
+      "name": "Critical care first hour 21",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2023",
+      "billing_code": "99291",
+      "description": "Critical care evaluation and management first 30-74 minutes",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            3
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "percentage",
+              "negotiated_rate": 14238.37,
+              "expiration_date": "2025-04-25",
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "service_code": [
+                "21",
+                "22"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "negotiation_arrangement": "bundle",
+      "name": "Vaccine admin IM 22",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2023",
+      "billing_code": "90471",
+      "description": "Immunization administration intramuscular",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            3
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "percentage",
+              "negotiated_rate": 3042.38,
+              "expiration_date": "2027-07-09",
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "service_code": [
+                "11",
+                "21",
+                "22"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "negotiation_arrangement": "ffs",
+      "name": "Colonoscopy diagnostic 23",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2023",
+      "billing_code": "45378",
+      "description": "Colonoscopy flexible proximal to splenic flexure diagnostic",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            2
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "per diem",
+              "negotiated_rate": 3592.18,
+              "expiration_date": "2025-10-01",
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "service_code": [
+                "61"
+              ],
+              "billing_code_modifier": [
+                "GY",
+                "AT"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "negotiation_arrangement": "bundle",
+      "name": "Upper GI endoscopy biopsy 24",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2023",
+      "billing_code": "43239",
+      "description": "Esophagogastroduodenoscopy with biopsy single or multiple",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            5
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "percentage",
+              "negotiated_rate": 14145.53,
+              "expiration_date": "2027-12-11",
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "service_code": [
+                "81"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "negotiation_arrangement": "capitation",
+      "name": "Upper GI endoscopy biopsy 25",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2023",
+      "billing_code": "43239",
+      "description": "Esophagogastroduodenoscopy with biopsy single or multiple",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            3
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "negotiated",
+              "negotiated_rate": 21282.29,
+              "expiration_date": "2025-03-02",
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "service_code": [
+                "12"
+              ],
+              "billing_code_modifier": [
+                "25"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "negotiation_arrangement": "ffs",
+      "name": "Office visit new patient 26",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2023",
+      "billing_code": "99203",
+      "description": "Office or outpatient visit new patient, moderate complexity",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            1
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "derived",
+              "negotiated_rate": 672.1,
+              "expiration_date": "2025-05-22",
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "service_code": [
+                "11",
+                "21"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "negotiation_arrangement": "capitation",
+      "name": "Ultrasound abdomen 27",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2023",
+      "billing_code": "76700",
+      "description": "Ultrasonography abdomen complete real time",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            5
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "negotiated",
+              "negotiated_rate": 15371.37,
+              "expiration_date": "2027-12-02",
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "service_code": [
+                "61"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "negotiation_arrangement": "capitation",
+      "name": "Total knee arthroplasty 28",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2023",
+      "billing_code": "27447",
+      "description": "Arthroplasty knee condyle and plateau medial and lateral compartments",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            4
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "negotiated",
+              "negotiated_rate": 9500.6,
+              "expiration_date": "2027-06-10",
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "service_code": [
+                "61"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "negotiation_arrangement": "capitation",
+      "name": "Vaccine admin IM 29",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2023",
+      "billing_code": "90471",
+      "description": "Immunization administration intramuscular",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            5
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "derived",
+              "negotiated_rate": 543.59,
+              "expiration_date": "2026-04-14",
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "service_code": [
+                "11",
+                "21",
+                "22"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "negotiation_arrangement": "bundle",
+      "name": "Subsequent hospital care 30",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2023",
+      "billing_code": "99232",
+      "description": "Subsequent hospital care moderate complexity per day",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            3
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "fee schedule",
+              "negotiated_rate": 7144.1,
+              "expiration_date": "2025-09-18",
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "service_code": [
+                "21"
+              ],
+              "billing_code_modifier": [
+                "76"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "negotiation_arrangement": "ffs",
+      "name": "X-ray chest 2 views 31",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2023",
+      "billing_code": "71046",
+      "description": "Radiologic examination chest 2 views",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            2
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "percentage",
+              "negotiated_rate": 19614.15,
+              "expiration_date": "2025-04-05",
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "service_code": [
+                "11",
+                "22"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "negotiation_arrangement": "bundle",
+      "name": "Office visit est patient 32",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2023",
+      "billing_code": "99213",
+      "description": "Office or outpatient visit established patient, moderate complexity",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            2
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "fee schedule",
+              "negotiated_rate": 14626.15,
+              "expiration_date": "2026-04-05",
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "service_code": [
+                "11",
+                "22"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "negotiation_arrangement": "capitation",
+      "name": "Critical care first hour 33",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2023",
+      "billing_code": "99291",
+      "description": "Critical care evaluation and management first 30-74 minutes",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            1
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "negotiated",
+              "negotiated_rate": 15451.67,
+              "expiration_date": "2026-09-21",
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "service_code": [
+                "21",
+                "22"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "negotiation_arrangement": "bundle",
+      "name": "Total knee arthroplasty 34",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2023",
+      "billing_code": "27447",
+      "description": "Arthroplasty knee condyle and plateau medial and lateral compartments",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            1
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "derived",
+              "negotiated_rate": 19819.93,
+              "expiration_date": "2027-05-05",
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "service_code": [
+                "31"
+              ],
+              "billing_code_modifier": [
+                "AT"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "negotiation_arrangement": "ffs",
+      "name": "Subsequent hospital care 35",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2023",
+      "billing_code": "99232",
+      "description": "Subsequent hospital care moderate complexity per day",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            1
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "negotiated",
+              "negotiated_rate": 925.31,
+              "expiration_date": "2026-01-07",
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "service_code": [
+                "21"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "negotiation_arrangement": "bundle",
+      "name": "CT head without contrast 36",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2023",
+      "billing_code": "70450",
+      "description": "Computed tomography head or brain without contrast material",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            2
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "percentage",
+              "negotiated_rate": 3555.54,
+              "expiration_date": "2026-09-18",
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "service_code": [
+                "13"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "negotiation_arrangement": "ffs",
+      "name": "Office visit est patient 37",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2023",
+      "billing_code": "99213",
+      "description": "Office or outpatient visit established patient, moderate complexity",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            1
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "per diem",
+              "negotiated_rate": 5233.32,
+              "expiration_date": "2026-06-02",
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "service_code": [
+                "CSTM-00"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "negotiation_arrangement": "bundle",
+      "name": "Office visit new patient 38",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2023",
+      "billing_code": "99203",
+      "description": "Office or outpatient visit new patient, moderate complexity",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            1
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "per diem",
+              "negotiated_rate": 2997.17,
+              "expiration_date": "2027-02-24",
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "service_code": [
+                "11",
+                "21"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "negotiation_arrangement": "capitation",
+      "name": "Office visit new patient 39",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2023",
+      "billing_code": "99203",
+      "description": "Office or outpatient visit new patient, moderate complexity",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            5
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "percentage",
+              "negotiated_rate": 818.16,
+              "expiration_date": "2027-04-10",
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "service_code": [
+                "CSTM-00"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "negotiation_arrangement": "capitation",
+      "name": "Critical care first hour 40",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2023",
+      "billing_code": "99291",
+      "description": "Critical care evaluation and management first 30-74 minutes",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            2
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "fee schedule",
+              "negotiated_rate": 16005.93,
+              "expiration_date": "2025-05-18",
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "service_code": [
+                "21",
+                "22"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "negotiation_arrangement": "capitation",
+      "name": "ECG with interpretation 41",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2023",
+      "billing_code": "93000",
+      "description": "Routine electrocardiogram with at least 12 leads with interpretation and report",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            2
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "derived",
+              "negotiated_rate": 13566.71,
+              "expiration_date": "2027-07-02",
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "service_code": [
+                "11"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "negotiation_arrangement": "bundle",
+      "name": "X-ray chest 2 views 42",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2023",
+      "billing_code": "71046",
+      "description": "Radiologic examination chest 2 views",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            1
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "fee schedule",
+              "negotiated_rate": 10420.89,
+              "expiration_date": "2025-12-23",
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "service_code": [
+                "CSTM-00"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "negotiation_arrangement": "capitation",
+      "name": "X-ray chest 2 views 43",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2023",
+      "billing_code": "71046",
+      "description": "Radiologic examination chest 2 views",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            2
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "percentage",
+              "negotiated_rate": 21050.95,
+              "expiration_date": "2027-12-08",
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "service_code": [
+                "11",
+                "22"
+              ],
+              "billing_code_modifier": [
+                "25",
+                "TC"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "negotiation_arrangement": "ffs",
+      "name": "ECG with interpretation 44",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2023",
+      "billing_code": "93000",
+      "description": "Routine electrocardiogram with at least 12 leads with interpretation and report",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            3
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "fee schedule",
+              "negotiated_rate": 19428.55,
+              "expiration_date": "2026-01-14",
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "service_code": [
+                "CSTM-00"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "negotiation_arrangement": "ffs",
+      "name": "CT head without contrast 45",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2023",
+      "billing_code": "70450",
+      "description": "Computed tomography head or brain without contrast material",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            4
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "per diem",
+              "negotiated_rate": 23982.68,
+              "expiration_date": "2027-10-08",
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "service_code": [
+                "61"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "negotiation_arrangement": "bundle",
+      "name": "Total knee arthroplasty 46",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2023",
+      "billing_code": "27447",
+      "description": "Arthroplasty knee condyle and plateau medial and lateral compartments",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            1
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "fee schedule",
+              "negotiated_rate": 20322.15,
+              "expiration_date": "2025-09-16",
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "service_code": [
+                "71"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "negotiation_arrangement": "capitation",
+      "name": "Vaccine admin IM 47",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2023",
+      "billing_code": "90471",
+      "description": "Immunization administration intramuscular",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            4
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "percentage",
+              "negotiated_rate": 7234.61,
+              "expiration_date": "2026-09-25",
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "service_code": [
+                "CSTM-00"
+              ],
+              "billing_code_modifier": [
+                "59"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "negotiation_arrangement": "ffs",
+      "name": "Inj perflutren lip micros 48",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2023",
+      "billing_code": "Q9957",
+      "description": "Injection perflutren lipid microspheres per ml",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            3
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "per diem",
+              "negotiated_rate": 13099.24,
+              "expiration_date": "2025-11-01",
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "service_code": [
+                "81"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "negotiation_arrangement": "capitation",
+      "name": "Subsequent hospital care 49",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2023",
+      "billing_code": "99232",
+      "description": "Subsequent hospital care moderate complexity per day",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            4
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "per diem",
+              "negotiated_rate": 2182.09,
+              "expiration_date": "2025-11-22",
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "service_code": [
+                "21"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "negotiation_arrangement": "capitation",
+      "name": "Upper GI endoscopy biopsy 50",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2023",
+      "billing_code": "43239",
+      "description": "Esophagogastroduodenoscopy with biopsy single or multiple",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            1
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "percentage",
+              "negotiated_rate": 24222.48,
+              "expiration_date": "2025-11-23",
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "service_code": [
+                "41"
+              ],
+              "billing_code_modifier": [
+                "GZ",
+                "AT"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]}
