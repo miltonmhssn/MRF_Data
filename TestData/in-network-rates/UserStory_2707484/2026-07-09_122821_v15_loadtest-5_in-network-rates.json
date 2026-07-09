@@ -1,0 +1,253 @@
+{
+  "reporting_entity_name": "AMPS",
+  "reporting_entity_type": "health insurance issuer",
+  "plan_name": "AMPSNEXT",
+  "plan_id_type": "ein",
+  "plan_id": "8632854728",
+  "plan_market_type": "individual",
+  "plan_sponsor_name": "MRF",
+  "issuer_name": "Mohammad",
+  "last_updated_on": "2024-10-30",
+  "version": "2.0.0",
+  "provider_references": [
+    {
+      "provider_group_id": 1,
+      "network_name": [
+        "Network C"
+      ],
+      "provider_groups": [
+        {
+          "npi": [
+            1751632991
+          ],
+          "tin": {
+            "type": "ein",
+            "value": "23-2242836",
+            "business_name": "Coastal Health Partners"
+          }
+        }
+      ]
+    },
+    {
+      "provider_group_id": 2,
+      "network_name": [
+        "Network Premier"
+      ],
+      "provider_groups": [
+        {
+          "npi": [
+            1936574136
+          ],
+          "tin": {
+            "type": "ein",
+            "value": "25-9820556",
+            "business_name": "Provider Group One"
+          }
+        }
+      ]
+    },
+    {
+      "provider_group_id": 3,
+      "network_name": [
+        "Network Beta"
+      ],
+      "provider_groups": [
+        {
+          "npi": [
+            1798379579
+          ],
+          "tin": {
+            "type": "ein",
+            "value": "95-3745629",
+            "business_name": "Community Health Network"
+          }
+        }
+      ]
+    },
+    {
+      "provider_group_id": 4,
+      "network_name": [
+        "Network C"
+      ],
+      "provider_groups": [
+        {
+          "npi": [
+            1073458853
+          ],
+          "tin": {
+            "type": "ein",
+            "value": "33-7008518",
+            "business_name": "Metropolitan Providers"
+          }
+        }
+      ]
+    },
+    {
+      "provider_group_id": 5,
+      "network_name": [
+        "Network Standard"
+      ],
+      "provider_groups": [
+        {
+          "npi": [
+            1350368366
+          ],
+          "tin": {
+            "type": "ein",
+            "value": "97-1878345",
+            "business_name": "Statewide Provider Network"
+          }
+        }
+      ]
+    }
+  ]
+  ,"in_network":[
+    {
+      "negotiation_arrangement": "capitation",
+      "name": "Vaccine admin IM 1",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2023",
+      "billing_code": "90471",
+      "description": "Immunization administration intramuscular",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            5
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "negotiated",
+              "negotiated_rate": 24289.72,
+              "expiration_date": "2025-11-03",
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "service_code": [
+                "11",
+                "21",
+                "22"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "negotiation_arrangement": "capitation",
+      "name": "ECG with interpretation 2",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2023",
+      "billing_code": "93000",
+      "description": "Routine electrocardiogram with at least 12 leads with interpretation and report",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            1
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "fee schedule",
+              "negotiated_rate": 14383.5,
+              "expiration_date": "2027-12-27",
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "service_code": [
+                "11"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "negotiation_arrangement": "capitation",
+      "name": "Vaccine admin IM 3",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2023",
+      "billing_code": "90471",
+      "description": "Immunization administration intramuscular",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            2
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "percentage",
+              "negotiated_rate": 20949.37,
+              "expiration_date": "2026-04-10",
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "service_code": [
+                "11",
+                "21",
+                "22"
+              ],
+              "billing_code_modifier": [
+                "TC"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "negotiation_arrangement": "ffs",
+      "name": "Vaccine admin IM 4",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2023",
+      "billing_code": "90471",
+      "description": "Immunization administration intramuscular",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            1
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "per diem",
+              "negotiated_rate": 18476.29,
+              "expiration_date": "2027-03-20",
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "service_code": [
+                "11",
+                "21",
+                "22"
+              ],
+              "billing_code_modifier": [
+                "TC",
+                "GX"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "negotiation_arrangement": "bundle",
+      "name": "Ultrasound abdomen 5",
+      "billing_code_type": "CPT",
+      "billing_code_type_version": "2023",
+      "billing_code": "76700",
+      "description": "Ultrasonography abdomen complete real time",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            1
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "percentage",
+              "negotiated_rate": 19856.47,
+              "expiration_date": "2025-03-01",
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "service_code": [
+                "71"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]}
