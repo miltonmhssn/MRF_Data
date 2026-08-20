@@ -1,0 +1,192 @@
+{
+  "reporting_entity_name": "AMPS",
+  "reporting_entity_type": "third-party administrator",
+  "plan_name": "AMPSNEXT",
+  "plan_id_type": "ein",
+  "plan_id": "5698178251",
+  "plan_market_type": "individual",
+  "plan_sponsor_name": "MRF",
+  "issuer_name": "Mohammad",
+  "last_updated_on": "2026-07-08",
+  "version": "2.0.0"
+  ,"out_of_network":[
+    {
+      "name": "Resin composite 1 surface 1",
+      "billing_code_type": "CDT",
+      "billing_code": "D2391",
+      "billing_code_type_version": "2023",
+      "description": "Resin-based composite one surface posterior primary or permanent CDT",
+      "allowed_amounts": [
+        {
+          "tin": {
+            "type": "ein",
+            "value": "14-5754751",
+            "business_name": "Integrated Care Solutions"
+          },
+          "billing_class": "professional",
+          "setting": "outpatient",
+          "payments": [
+            {
+              "allowed_amount": 4055.27,
+              "providers": [
+                {
+                  "npi": [
+                    1468257302
+                  ],
+                  "billed_charge": 2868.09
+                },
+                {
+                  "npi": [
+                    1022617282
+                  ],
+                  "billed_charge": 2910.21
+                }
+              ]
+            }
+          ],
+          "service_code": [
+            "11"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Renal failure w MCC 2",
+      "billing_code_type": "MS-DRG",
+      "billing_code": "683",
+      "billing_code_type_version": "2023",
+      "description": "Renal failure with MCC",
+      "allowed_amounts": [
+        {
+          "tin": {
+            "type": "ein",
+            "value": "33-7104386",
+            "business_name": "Valley Medical Group"
+          },
+          "billing_class": "institutional",
+          "setting": "inpatient",
+          "payments": [
+            {
+              "allowed_amount": 784.03,
+              "providers": [
+                {
+                  "npi": [
+                    1165613964
+                  ],
+                  "billed_charge": 5003.01
+                },
+                {
+                  "npi": [
+                    1673290408
+                  ],
+                  "billed_charge": 7483.61
+                }
+              ],
+              "billing_code_modifier": [
+                "76"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "APR-DRG Major severity 3",
+      "billing_code_type": "APR-DRG",
+      "billing_code": "APR302",
+      "billing_code_type_version": "2023",
+      "description": "All-patient refined DRG major severity subclass",
+      "allowed_amounts": [
+        {
+          "tin": {
+            "type": "ein",
+            "value": "71-9113222",
+            "business_name": "Valley Medical Group"
+          },
+          "billing_class": "professional",
+          "setting": "outpatient",
+          "payments": [
+            {
+              "allowed_amount": 3004.45,
+              "providers": [
+                {
+                  "npi": [
+                    1426275108
+                  ],
+                  "billed_charge": 3677.92
+                }
+              ]
+            }
+          ],
+          "service_code": [
+            "23"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "R-DRG Ortho rehabilitation 4",
+      "billing_code_type": "R-DRG",
+      "billing_code": "R004",
+      "billing_code_type_version": "2023",
+      "description": "Refined DRG orthopaedic rehabilitation without CC",
+      "allowed_amounts": [
+        {
+          "tin": {
+            "type": "ein",
+            "value": "67-2430068",
+            "business_name": "Statewide Provider Network"
+          },
+          "billing_class": "institutional",
+          "setting": "outpatient",
+          "payments": [
+            {
+              "allowed_amount": 2265.71,
+              "providers": [
+                {
+                  "npi": [
+                    1927829648
+                  ],
+                  "billed_charge": 2811.16
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "APS-DRG Pediatric surgical 5",
+      "billing_code_type": "APS-DRG",
+      "billing_code": "APS101",
+      "billing_code_type_version": "2023",
+      "description": "All-patient severity DRG pediatric surgical case with CC",
+      "allowed_amounts": [
+        {
+          "tin": {
+            "type": "ein",
+            "value": "11-4123550",
+            "business_name": "Provider Group One"
+          },
+          "billing_class": "professional",
+          "setting": "inpatient",
+          "payments": [
+            {
+              "allowed_amount": 4866.05,
+              "providers": [
+                {
+                  "npi": [
+                    1033534130
+                  ],
+                  "billed_charge": 1234.66
+                }
+              ]
+            }
+          ],
+          "service_code": [
+            "81"
+          ]
+        }
+      ]
+    }
+  ]}

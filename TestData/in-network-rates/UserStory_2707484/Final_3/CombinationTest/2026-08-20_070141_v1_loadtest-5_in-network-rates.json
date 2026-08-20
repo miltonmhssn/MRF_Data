@@ -1,0 +1,205 @@
+{
+  "reporting_entity_name": "AMPS",
+  "reporting_entity_type": "health insurance issuer",
+  "plan_name": "AMPSNEXT",
+  "plan_id_type": "ein",
+  "plan_id": "5910524077",
+  "plan_market_type": "individual",
+  "plan_sponsor_name": "MRF",
+  "issuer_name": "Mohammad",
+  "last_updated_on": "2026-08-05",
+  "version": "2.0.0",
+  "provider_references": [
+    {
+      "provider_group_id": 1,
+      "network_name": [
+        "Network Beta"
+      ],
+      "provider_groups": [
+        {
+          "npi": [
+            1054937482
+          ],
+          "tin": {
+            "type": "ein",
+            "value": "10-7247318",
+            "business_name": "Primary Care Partners"
+          }
+        }
+      ]
+    },
+    {
+      "provider_group_id": 2,
+      "network_name": [
+        "Network Gold"
+      ],
+      "provider_groups": [
+        {
+          "npi": [
+            1101722357
+          ],
+          "tin": {
+            "type": "ein",
+            "value": "20-8323292",
+            "business_name": "Statewide Provider Network"
+          }
+        }
+      ]
+    },
+    {
+      "provider_group_id": 3,
+      "network_name": [
+        "Network Beta"
+      ],
+      "provider_groups": [
+        {
+          "npi": [
+            1342813318
+          ],
+          "tin": {
+            "type": "ein",
+            "value": "56-7779415",
+            "business_name": "Advanced Medical Group"
+          }
+        }
+      ]
+    }
+  ]
+  ,"in_network":[
+    {
+      "negotiation_arrangement": "ffs",
+      "name": "Level 1 minor procedure 1",
+      "billing_code_type": "APC",
+      "billing_code_type_version": "2023",
+      "billing_code": "5161",
+      "description": "Level 1 minor procedure APC surgical",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            3
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "negotiated",
+              "negotiated_rate": 1361.08,
+              "expiration_date": "2027-04-16",
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "service_code": [
+                "32"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "negotiation_arrangement": "ffs",
+      "name": "Heart failure w MCC 2",
+      "billing_code_type": "MS-DRG",
+      "billing_code_type_version": "2023",
+      "billing_code": "291",
+      "description": "Heart failure and shock with MCC",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            3
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "fee schedule",
+              "negotiated_rate": 8920.83,
+              "expiration_date": "2027-07-23",
+              "billing_class": "institutional",
+              "setting": "inpatient",
+              "billing_code_modifier": [
+                "KX",
+                "GZ"
+              ]
+            }
+          ]
+        }
+      ],
+      "severity_of_illness": "Major Complications or Comorbidities"
+    },
+    {
+      "negotiation_arrangement": "bundle",
+      "name": "Spinal fusion except cervical 3",
+      "billing_code_type": "MS-DRG",
+      "billing_code_type_version": "2023",
+      "billing_code": "459",
+      "description": "Spinal fusion except cervical without MCC",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            2
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "derived",
+              "negotiated_rate": 6174.13,
+              "expiration_date": "2026-04-10",
+              "billing_class": "institutional",
+              "setting": "inpatient"
+            }
+          ]
+        }
+      ],
+      "severity_of_illness": "Without CC or MCC"
+    },
+    {
+      "negotiation_arrangement": "ffs",
+      "name": "Glucose test strips 50 4",
+      "billing_code_type": "HCPCS",
+      "billing_code_type_version": "2023",
+      "billing_code": "A4253",
+      "description": "Blood glucose test or reagent strips home monitor per 50",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            2
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "negotiated",
+              "negotiated_rate": 2375.64,
+              "expiration_date": "2026-02-07",
+              "billing_class": "professional",
+              "setting": "outpatient",
+              "service_code": [
+                "12"
+              ],
+              "billing_code_modifier": [
+                "AT",
+                "59"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "negotiation_arrangement": "bundle",
+      "name": "Invega 6mg 30ct 5",
+      "billing_code_type": "NDC",
+      "billing_code_type_version": "2023",
+      "billing_code": "50458058030",
+      "description": "Paliperidone 6mg extended release tablet 30 count NDC",
+      "negotiated_rates": [
+        {
+          "provider_references": [
+            2
+          ],
+          "negotiated_prices": [
+            {
+              "negotiated_type": "percentage",
+              "negotiated_rate": 7423.7,
+              "expiration_date": "2027-06-10",
+              "billing_class": "institutional",
+              "setting": "inpatient"
+            }
+          ]
+        }
+      ]
+    }
+  ]}
